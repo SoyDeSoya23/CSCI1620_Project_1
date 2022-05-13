@@ -1,13 +1,10 @@
-# TODO: account for invalid input data
-# TODO: Find where to implement exception handling
-# TODO: Create an intuitive GUI
 
 class Television:
     """
     Class which represents the Television objects.
     """
 
-    def __init__(self, c_min=0, c_max=3, v_min=0, v_max=2) -> None:
+    def __init__(self, c_min=0, c_max=0, v_min=0, v_max=0) -> None:
         """
         Constructor which sets the default attributes for Television.
         :param c_min: Minimum TV channel
@@ -24,6 +21,48 @@ class Television:
         self.__channel: int = c_min
         self.__volume: int = v_min
         self.__status: bool = False
+
+    def get_min_channel(self) -> int:
+        """
+        Method that returns a Television's minimum channel value.
+        :return: A Television's minimum channel value.
+        """
+        return self.__MIN_CHANNEL
+
+    def get_max_channel(self) -> int:
+        """
+        Method that returns a Television's maximum channel value.
+        :return: A Television's maximum channel value.
+        """
+        return self.__MAX_CHANNEL
+
+    def get_min_volume(self) -> int:
+        """
+        Method that returns a Television's minimum volume value.
+        :return: A Television's minimum volume value.
+        """
+        return self.__MIN_VOLUME
+
+    def get_max_volume(self) -> int:
+        """
+        Method that returns a Television's maximum volume value.
+        :return: A Television;s maximum volume value.
+        """
+        return self.__MAX_VOLUME
+
+    def get_channel(self) -> int:
+        """
+        Method that returns a Television's current channel value.
+        :return: A Television's current channel value.
+        """
+        return self.__channel
+
+    def get_volume(self) -> int:
+        """
+        Method that returns a Television's current volume value.
+        :return: A Television's current volume value.
+        """
+        return self.__volume
 
     def power(self) -> None:
         """
